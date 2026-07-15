@@ -5,13 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dyan Kirana Putri</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
   </head>
   <body>
     <header>
-      <h1>Kirana</h1>
+      <h1>
+        <span class="tag">&lt;/</span>
+        <span class="logo-text"
+          ><a href="#home" class="logo">
+            <span class="logo-text">Kirana | RPL Student</span>
+          </a></span
+        >
+        <span class="tag">&gt;</span>
+      </h1>
       <nav>
-        <ul>
-          <li><a href="#home">Home</a></li>
+        <div class="menu-toggle" id="menu-toggle">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+        <ul class="nav-links" id="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#skill">Skills</a></li>
           <li><a href="#project">Project</a></li>
@@ -32,9 +46,7 @@
             Learning Front-end Development
           </h3>
           <p>Love turning ideas into interactive websites.</p>
-          <p class="hero-location">
-            📍 Padang Panjang, Sumatera Barat, Indonesia
-          </p>
+          <p class="hero-location">📍 Tanah Datar, Sumatera Barat, Indonesia</p>
           <div class="button-group">
             <a href="#project" class="btn">Lihat Project</a>
             <a href="#contact" class="btn-outline">Contact</a>
@@ -47,28 +59,33 @@
 
       <!--About-->
       <section id="about" class="section-padding">
-          <div class="section-title reveal">
-            <span class="icon">👩‍💻</span>
-            <h2>About Me</h2>
+        <div class="section-title reveal">
+          <span class="icon">👩‍💻</span>
+          <h2>About Me</h2>
+        </div>
+        <div class="about-content">
+          <div class="about-image reveal">
+            <img src="IMG_20260306_190922.jpg" alt="Foto Dyan Kirana Putri" />
           </div>
-          <div class="about-content">
-            <div class="about-image reveal">
-              <img src="IMG_20260306_190922.jpg" alt="Foto Dyan Kirana Putri" />
-            </div>
-            <div class="about-text reveal">
+          <div class="about-text reveal">
+            <div class="card">
               <p>
                 Halo, saya <strong>Dyan Kirana Putri</strong>. Seorang pelajar
                 SMK jurusan Rekayasa Perangkat Lunak (RPL) yang sedang
-                mempelajari Front-end Development.
-              </p>
-              <p>
+                mempelajari Front-end Development. <br />
                 Saat ini saya fokus mempelajari HTML dan CSS untuk membangun
-                website yang rapi, responsif, dan nyaman digunakan.
-              </p>
-              <p>
+                website yang rapi, responsif, dan nyaman digunakan. <br />
                 Saya senang mempelajari hal-hal baru, mencoba desain antarmuka,
                 dan terus mengembangkan kemampuan melalui berbagai proyek
                 pribadi.
+              </p> <br>
+
+              <h2> Data Diri</h2>
+              <p>
+                Umur : 17 tahun <br />
+                Hobi : Membaca dan menulis, memecahkan teka-teki <br />
+                Alamat : Batipuh, Kabupaten Tanah Datar, Provinsi
+                Sumatera Barat, Indonesia
               </p>
             </div>
           </div>
@@ -167,6 +184,10 @@
                 <p><strong>Teknologi:</strong> HTML5, CSS3</p>
                 <p><strong>Status:</strong> 🚧 On Going</p>
               </div>
+              <img
+                src="5a2e0751-86ec-429d-9879-43898010a78b - Copy.png"
+                alt="Foto Project"
+              />
             </article>
 
             <article class="project-card">
@@ -192,7 +213,7 @@
           <div class="education-card">
             <div class="content-card reveal">
               <h3>SMK Negeri 2 Padang Panjang</h3>
-              <p class="education-period">2023 - Present</p>
+              <p class="education-period">2025 - Present</p>
               <p class="education-major">Major: Software Engineering (RPL)</p>
               <p class="education-description">
                 Currently learning web development, focusing on HTML, CSS, and
@@ -248,16 +269,17 @@
                 <p>@kin.kirana</p>
               </div>
             </a>
-			<a 
-			href="https://www.linkedin.com/in/dyan-kirana-putri"
-			target="_blank"
-			rel="noopener noreferrer"
-			class="contact-card">
-			  <div class="content-card reveal">
+            <a
+              href="https://www.linkedin.com/in/dyan-kirana-putri"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-card"
+            >
+              <div class="content-card reveal">
                 <h3>💼 LinkedIn</h3>
                 <p>Dyan Kirana Putri</p>
               </div>
-			</a>
+            </a>
           </div>
         </div>
       </section>
@@ -270,27 +292,6 @@
       </div>
       <a href="#home" class="back-to-top">⬆</a>
     </footer>
-
-    <script>
-      const reveals = document.querySelectorAll(".reveal");
-
-      function revealOnScroll() {
-        reveals.forEach((element) => {
-          const windowHeight = window.innerHeight;
-
-          const elementTop = element.getBoundingClientRect().top;
-
-          const revealPoint = 100;
-
-          if (elementTop < windowHeight - revealPoint) {
-            element.classList.add("active");
-          }
-        });
-      }
-
-      window.addEventListener("scroll", revealOnScroll);
-
-      revealOnScroll();
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>

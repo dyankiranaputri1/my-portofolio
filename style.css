@@ -365,6 +365,7 @@ section {
   justify-content: center;
   gap: 30px;
   margin-top: 50px;
+  align-items: start;
 }
 
 .project-card {
